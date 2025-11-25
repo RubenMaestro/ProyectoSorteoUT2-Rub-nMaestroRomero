@@ -1,130 +1,86 @@
-/* FONDO ANIMADO DISCOTECA */
 body {
     margin: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    background: linear-gradient(135deg, #0a001a, #1a0033, #26004d, #330066);
-    background-size: 400% 400%;
-    animation: fondoAnimado 12s ease infinite;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
 }
 
-@keyframes fondoAnimado {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* TARJETA CENTRAL */
 .contenedor {
     width: 90%;
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 35px;
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
-    color: white;
 }
 
-/* TÍTULOS */
 h1 {
-    font-size: 32px;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ff33cc;
-    text-shadow: 0 0 8px #ff33cc;
+    font-size: 26px;
+    margin-bottom: 5px;
 }
 
 h2 {
-    margin-top: 5px;
-    font-size: 18px;
-    color: #ddd;
+    font-size: 16px;
+    color: #444;
+    margin-top: 0;
 }
 
-/* FORMULARIO */
 form {
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"] {
     width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.3);
-    font-size: 16px;
-    box-sizing: border-box;
-    background: rgba(255,255,255,0.12);
-    color: white;
-    transition: 0.3s;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-input::placeholder {
-    color: #ddd;
-}
-
-input:focus {
-    border-color: #ff33cc;
-    box-shadow: 0 0 10px #ff33cc;
-    outline: none;
-}
-
-/* FECHA & CHECKBOX */
 .label-fecha {
     text-align: left;
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: -5px;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #444;
+    font-weight: bold;
 }
 
 .check {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 15px;
-    color: #eee;
+    gap: 6px;
+    font-size: 14px;
 }
 
-/* BOTÓN PRINCIPAL */
 button {
-    padding: 16px;
-    background: linear-gradient(90deg, #ff0077, #ff33cc, #cc00ff);
+    background: #008f39;
     color: white;
     border: none;
-    border-radius: 12px;
-    font-size: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 0 12px #ff33cc;
-    transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 18px #ff66dd;
+    background: #007530;
 }
 
-/* MENSAJES */
 #mensaje {
-    margin-top: 18px;
+    margin-top: 15px;
+    font-size: 14px;
     font-weight: bold;
-    font-size: 16px;
-}
-
-#mensaje.red {
-    color: #ff4444;
-    text-shadow: 0 0 8px red;
-}
-
-#mensaje.green {
-    color: #44ff88;
-    text-shadow: 0 0 8px #44ff88;
+    color: red;
 }

@@ -2,7 +2,7 @@
 // ============= CONFIGURAR FECHA DEL SORTEO ============
 // =======================================================
 
-const fechaSorteo = new Date("2025-12-30T10:10:00").getTime();
+const fechaSorteo = new Date("2025-11-25T12:12:00").getTime();
 
 // COOKIES AUTOMÁTICAS 
 // Cookie origen (30 días)
@@ -37,7 +37,7 @@ if (getCookie("registrado") === "1") {
     document.querySelector("button[type='submit']").disabled = true;
 }
 
-// =============== OBTENER TODAS LAS COOKIES =============
+// OBTENER TODAS LAS COOKIES
 function obtenerCookies() {
     const obj = {};
     document.cookie.split(";").forEach(c => {

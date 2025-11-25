@@ -2,6 +2,9 @@
   "name": "sorteo-backend",
   "version": "1.0.0",
   "description": "Backend para proyecto Sorteo - UT2",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
