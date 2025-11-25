@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo VIP - Evento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Sorteo VIP - Evento</h1>
+        <h2><span id="countdown">Cargando...</span></h2>
+
+        <form id="form">
+
+            <input type="text" name="nombre" placeholder="Nombre">
+
+            <input type="text" name="apellidos" placeholder="Apellidos">
+
+            <input type="email" name="email" placeholder="Correo">
+
+            <input type="text" name="telefono" placeholder="Teléfono">
+
+            <label class="label-fecha">Fecha de nacimiento:</label>
+            <input type="date" name="fechaNacimiento">
+
+            <label class="check">
+                <input type="checkbox" id="acepto">
+                Acepto la Política de Privacidad
+            </label>
+
+            <button type="submit">Apuntarse al sorteo</button>
+
+        </form>
+
+        <p id="mensaje"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

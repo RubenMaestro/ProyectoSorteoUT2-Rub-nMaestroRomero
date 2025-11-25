@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ganador del Sorteo</title>
+    <link rel="stylesheet" href="ganador.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1 class="felicidades">🎉 ¡FELICIDADES! 🎉</h1>
+
+        <h2 id="nombreGanador" class="nombre"></h2>
+
+        <p class="mensaje">
+            ¡Has sido seleccionado como el ganador del sorteo VIP!<br>
+            Te contactaremos por email lo antes posible!!
+        </p>
+
+        <a class="boton" href="index.html">Volver al inicio</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get("nombre") || "";
+        const apellidos = params.get("apellidos") || "";
+        document.getElementById("nombreGanador").textContent =
+            `${nombre} ${apellidos}`.trim().toUpperCase();
+
+        // Reiniciar base de datos 5s después
+        setTimeout(async () => {
+            try {
+                await fetch("/api/ganadores/reiniciarTodo", { method: "DELETE" });
+            } catch (err) {
+                console.error("Error reiniciando:", err);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
